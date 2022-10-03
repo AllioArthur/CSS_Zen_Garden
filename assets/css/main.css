@@ -17,6 +17,13 @@
     src: url("/assets/fonts/BDMegalonaDEMOPersonalUseOnly-RegularItalic.otf");
   }
 
+  /* noto */  
+  @font-face {
+    font-family: 'noto';
+    src: url("/assets/fonts/NotoSansJP-Bold.otf;");
+  }
+
+  /* keyframes kit */
   @keyframes glow {
     from {
       text-shadow: 0 0 5px #ffe4c4;
@@ -25,6 +32,8 @@
       text-shadow: 0 0 10px #ffe0c6, 0 0 20px #ffe0c6, 0 0 20px #ffeee0;
     }
   }
+
+  @import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
 
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GENERAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -39,11 +48,19 @@ abbr {
 
 /* background image */
 body    {
-    background-image: url("/assets/img/ruined-garden.jpg");
+    /*background-image: url("/assets/img/ruined-garden.jpg");*/
     background-size: cover;
     background-position: center;
+    /*
     background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("/assets/img/ruined-garden.jpg");
+    */
     background-attachment: fixed;
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 *{
@@ -59,12 +76,18 @@ a {
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ css zen garden  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 h1 {
-    font-family: 'megalona';
-    padding: 20% 10% 0%;
-    color: #ffe4c4;
+    font-family: 'moon';
+    padding: 10% 10% 0%;
+    /*color: #ffe4c4;*/
     text-align: center;
-    font-size: 700%;
-    letter-spacing: -4px;
+    font-size: 900%;
+    letter-spacing: 0px;
+    background: url(/assets/img/ruined-garden-2.jpg);
+    background-attachment: fixed;
+    background-size: 40%;
+    background-position: 50% 50%;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,0.08);
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ the beauty of css design  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -73,19 +96,31 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     font-style: italic;
-    color: bisque;
+    /*color: bisque;*/
     text-align: center;
     font-size: 100%;
+    background: url(/assets/img/ruined-garden-2.jpg);
+    background-attachment: fixed;
+    background-size: 40%;
+    background-position: 50% 50%;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,0.08);
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ a demonstration  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #zen-summary {
-    padding: 3% 10% 22%;
-    color: bisque;
+    padding: 3% 10% 10%;
+    /*color: bisque;*/
     text-align: center;
-    font-size: 140%;
+    font-size: 120%;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
+    font-weight: bold;
+    background: url(/assets/img/ruined-garden-2.jpg);
+    background-attachment: fixed;
+    background-size: 40%;
+    background-position: 50% 50%;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,0.08);
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ the road to enlightenment  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -104,6 +139,7 @@ h2 {
 }
 
 #zen-preamble {
+    z-index: 1;
     width: auto;
     height: auto;
     padding: 6% 25% 7%;
@@ -113,6 +149,10 @@ h2 {
     box-shadow: #000000 20px 20px 50px 10px;
     font-size: 150%;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    word-spacing: 0.25em;
+    line-height: 1.4;
+    font-size: 20px;
 }
 
 h3 {
@@ -124,31 +164,27 @@ h3 {
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ le regroupement des divs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #zen-supporting {
-    margin: 60px 50px 50px;
-    position: center;
+    z-index: -1;
+    margin: 0;
     padding: 5% 5% 5% 5%;
     color: beige;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    font-size: 120%;
+    flex-flow: row-reverse wrap;
+    font-size: 1vw;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("/assets/img/ruined-garden-2.jpg");
     background-size: cover;
     background-position: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("/assets/img/ruined-garden-2.jpg");
     background-attachment: fixed;
-    box-shadow: #000000 20px 20px 50px 10px;
-
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ les divs individuelles  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #zen-explanation {
-    font-size: 1vw;
     margin: auto;
+    padding: 5% 5% 5%;
     border-radius: 10px;
     width: 40%;
-    padding: 5% 5% 5%;
     background-color: beige;
     color: #1f3a2c;
     font-family: Arial, Helvetica, sans-serif;
@@ -156,29 +192,25 @@ h3 {
 }
 
 #zen-participation {
-    font-size: 1vw;
     margin: auto;
-    width: 40%;
     padding: 5% 5% 5%;
+    width: 40%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #zen-requirements {
-    font-size: 1vw;
     margin: auto;
+    padding: 5% 5% 5%;
     border-radius: 10px;
     width: 40%;
-    padding: 5% 5% 5%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: beige;
     color: #1f3a2c;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
 
 #zen-benefits {
-    font-size: 1vw;
-    margin: auto;
+    padding: 5% 5% 0%;
     width: 40%;
-    padding: 5% 5% 5%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -192,11 +224,32 @@ h3 {
     justify-content: space-between;
     width: 100%;
     padding: 15% 5% 5%;
-    font-family: 'megalona';
+    font-family: 'dream';
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 30px;
     color: beige;
+}
+
+/* animation mouse hover */
+.zen-validate-html:hover {
+    color: rgb(231, 174, 99);
+}
+
+.zen-validate-css:hover {
+    color: rgb(231, 174, 99);
+}
+
+.zen-license:hover {
+    color: rgb(231, 174, 99);
+}
+
+.zen-accessibility:hover {
+    color: rgb(231, 174, 99);
+}
+
+.zen-github:hover {
+    color: rgb(231, 174, 99);
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ sidebar ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
