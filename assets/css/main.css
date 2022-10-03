@@ -86,6 +86,7 @@ h1 {
     background-attachment: fixed;
     background-size: 40%;
     background-position: 50% 50%;
+    -webkit-background-clip: text;
     color: rgba(0,0,0,0.08);
 }
 
@@ -102,6 +103,7 @@ h2 {
     background-attachment: fixed;
     background-size: 40%;
     background-position: 50% 50%;
+    -webkit-background-clip: text;
     color: rgba(0,0,0,0.08);
 }
 
@@ -117,6 +119,7 @@ h2 {
     background-attachment: fixed;
     background-size: 40%;
     background-position: 50% 50%;
+    -webkit-background-clip: text;
     color: rgba(0,0,0,0.08);
 }
 
